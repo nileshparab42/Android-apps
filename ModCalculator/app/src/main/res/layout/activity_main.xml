@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/modulusButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="125dp"
+        android:paddingTop="20dp"
+        android:paddingRight="125dp"
+        android:paddingBottom="20dp"
+        android:text="Modulus"
+        android:textSize="18sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divisorLayout"
+        app:rippleColor="#FFFFFF" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dividendLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="331dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Enter Dividend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dividendEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/divisorLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="331dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Enter Divisor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividendLayout"
+        app:layout_constraintVertical_bias="0.043">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/divisorEditText"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="60dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/remainderEditText"
+        android:layout_width="296dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="casual"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#351175"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modulusButton" />
+
+    <TextView
+        android:id="@+id/quotientEditText"
+        android:layout_width="296dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="casual"
+        android:textColor="#351175"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remainderEditText"
+        app:layout_constraintVertical_bias="0.041" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
